@@ -1,5 +1,6 @@
 func isAnagram(s string, t string) bool {
-  var countAlphabet [26]int
+	
+  	var countAlphabet [26]int
 	for i := 0; i < len(s); i++ {
 		countAlphabet[s[i] - 'a']++
 	}
@@ -7,7 +8,9 @@ func isAnagram(s string, t string) bool {
 		countAlphabet[t[i] - 'a']--
 	}
 	for i := 0; i < 26; i++ {
-		if countAlphabet[i] != 0{return false}
+		if countAlphabet[i] != 0{
+			return false
+		}
 	}
 	return true
 }
